@@ -1,0 +1,12 @@
+{
+  "name": "rutas-del-conductor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "rutasC.js",
+  "scripts": {
+    "start": "expo start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
