@@ -6,6 +6,8 @@ const Actualizar = () => {
   const [id, setId] = useState('');
   const [nombreJefeRuta, setNombreJefeRuta] = useState('');
   const [apellidosJefeRuta, setApellidosJefeRuta] = useState('');
+  const [correoJefeRuta, setCorreoJefeRuta] = useState('')
+  const [contraseñaJefeRuta, setContraseñaJefeRuta] = useState('');
   const [nombreConductor, setNombreConductor] = useState('');
   const [apellidosConductor, setApellidosConductor] = useState('');
   const [edadConductor, setEdadConductor] = useState('');
@@ -20,6 +22,8 @@ const Actualizar = () => {
         if (data) {
           setNombreJefeRuta(data.nombreJefeRuta);
           setApellidosJefeRuta(data.apellidosJefeRuta);
+          setCorreoJefeRuta(data.correoJefeRuta);
+          setContraseñaJefeRuta(data.contraseñaJefeRuta);
           setNombreConductor(data.nombreConductor);
           setApellidosConductor(data.apellidosConductor);
           setEdadConductor(data.edadConductor.toString());
@@ -32,6 +36,8 @@ const Actualizar = () => {
     firebase.database().ref(`crud/${id}`).set({
       nombreJefeRuta,
       apellidosJefeRuta,
+      correoJefeRuta,
+      contraseñaJefeRuta,
       nombreConductor,
       apellidosConductor,
       edadConductor,
@@ -56,6 +62,16 @@ const Actualizar = () => {
         placeholder="Apellidos del jefe de ruta"
         value={apellidosJefeRuta}
         onChangeText={setApellidosJefeRuta}
+      />
+      <TextInput
+        placeholder="Correo del jefe de ruta"
+        value={correoJefeRuta}
+        onChangeText={setCorreoJefeRuta}
+      />
+      <TextInput
+        placeholder="Contraseña del jefe de ruta"
+        value={contraseñaJefeRuta}
+        onChangeText={setContraseñaJefeRuta}
       />
       <TextInput
         placeholder="Nombre del conductor"

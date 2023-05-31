@@ -33,6 +33,8 @@ const Leer = () => {
         <View key={registro.id}>
           <Text>Nombre del jefe de ruta: {registro.nombreJefeRuta}</Text>
           <Text>Apellidos del jefe de ruta: {registro.apellidosJefeRuta}</Text>
+          <Text>Correo del jefe de ruta: {registro.correoJefeRuta}</Text>
+          <Text>Contraseña del jefe de ruta: {registro.contraseñaJefeRuta}</Text>          
           <Text>Nombre del conductor: {registro.nombreConductor}</Text>
           <Text>Apellidos del conductor: {registro.apellidosConductor}</Text>
           <Text>Edad del conductor: {registro.edadConductor}</Text>
